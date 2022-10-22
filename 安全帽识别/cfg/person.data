@@ -1,0 +1,15 @@
+cfg_model=yolo
+classes=1
+gpus = 0
+num_workers = 8
+batch_size = 8
+img_size = 416
+multi_scale = True
+epochs = 100
+train=./yolo_person_train/anno/train.txt
+valid=./yolo_person_train/anno/train.txt
+names=./cfg/person.names
+#finetune_model=./coco_model/yolov3_coco.pt
+finetune_model = ./weights-yolov3-person/latest_416.pt
+lr_step = 10,20,30
+lr0 = 0.0001

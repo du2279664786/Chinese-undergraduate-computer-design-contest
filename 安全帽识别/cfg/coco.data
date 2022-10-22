@@ -1,0 +1,13 @@
+cfg_model=yolo
+classes=80
+gpus = 0
+num_workers = 8
+batch_size = 16
+img_size = 416
+multi_scale = True
+epochs = 100
+train=./datasets_train/anno/train.txt
+valid=./datasets_train/anno/train.txt
+names=./cfg/coco.names
+finetune_model=./coco_model/yolov3_coco.pt
+lr_step = 30,40,60
